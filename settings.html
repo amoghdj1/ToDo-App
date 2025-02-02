@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalist ToDo App</title>
+    <title>Settings</title>
     <link rel="stylesheet" href="src/styles/styles.css">
 </head>
 <body>
     <header>
-        <h1>ToDo App</h1>
-        <nav>
-            <a href="settings.html" class="settings-button">Settings</a>
-        </nav>
+        <h1>Settings</h1>
     </header>
-    <div id="app"></div>
+    <div id="settings">
+        <label for="theme-toggle" class="theme-label">Dark Mode:</label>
+        <input type="checkbox" id="theme-toggle">
+        <button class="back-button" onclick="window.history.back()">Back</button>
+    </div>
     <footer>
         <p>&copy; 2025 Limited</p>
         <p>Contact us: <a href="mailto:amoghdj.3@gmail.com">amoghdj.3@gmail.com</a></p>
@@ -23,7 +24,7 @@
             <img src="path/to/github-logo.png" alt="GitHub Logo" class="footer-logo">
         </div>
     </footer>
-    <script type="module" src="src/app.js"></script>
+    <script type="module" src="src/settings.js"></script>
     <script type="module" src="src/theme.js"></script>
 </body>
 </html>

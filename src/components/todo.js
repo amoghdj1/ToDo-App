@@ -12,6 +12,7 @@ export function createTodoComponent() {
     titleInput.placeholder = 'Title';
     detailInput.placeholder = 'Detail';
     dueDateInput.placeholder = 'Due Date (DD/MM/YY)';
+    dueDateInput.type = 'date';
     addButton.textContent = 'Add';
 
     form.appendChild(titleInput);
@@ -23,7 +24,11 @@ export function createTodoComponent() {
         event.preventDefault();
         const todoTitle = titleInput.value.trim();
         const todoDetail = detailInput.value.trim();
-        const todoDueDate = dueDateInput.value.trim();
+        let todoDueDate = dueDateInput.value.trim();
+        if (!todoDueDate) {
+            const today = new Date();
+            todoDueDate = today.toISOString().split('T')[0];
+        }
         if (todoTitle && todoDetail && todoDueDate) {
             addTodo({ title: todoTitle, detail: todoDetail, dueDate: todoDueDate }, todoList);
             titleInput.value = '';
