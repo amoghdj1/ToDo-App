@@ -1,11 +1,18 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #E5E5E5; /* Limestone */
+}
+
+header {
+    background-color: #012169; /* Duke Navy Blue */
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
 
 #app {
@@ -13,11 +20,17 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 input {
     padding: 10px;
-    margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -25,14 +38,14 @@ input {
 button {
     padding: 10px;
     border: none;
-    background-color: #007BFF;
+    background-color: #00539B; /* Duke Royal Blue */
     color: white;
     border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #003366; /* Darker shade of Duke Royal Blue */
 }
 
 ul {
@@ -44,13 +57,30 @@ li {
     padding: 10px;
     border-bottom: 1px solid #ccc;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 5px;
 }
 
 li button {
-    background-color: #dc3545;
+    background-color: #C84E00; /* Copper */
 }
 
 li button:hover {
-    background-color: #c82333;
+    background-color: #993300; /* Darker shade of Copper */
+}
+
+footer {
+    background-color: #012169; /* Duke Navy Blue */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: #FFD960; /* Dandelion */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
